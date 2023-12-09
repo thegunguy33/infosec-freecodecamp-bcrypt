@@ -7,21 +7,22 @@ fccTesting(app);
 const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
+const bcrypt      = require('bcrypt');
 const hash = bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
-    /*Store hash in your db*/
-});
-bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
-    /*res == true or false*/
+    console.log(hash);
+    bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
+        console.log(res);
+    });
 });
 
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
-const bcrypt      = require('bcrypt');
+
 
 
 bcrypt.hash('passw0rd!', 13, (err, hash) => {
     console.log(hash);
     //$2a$12$Y.PHPE15wR25qrrtgGkiYe2sXo98cjuMCG1YwSI5rJW1DSJp0gEYS
-    bcrypt.compare('passw0rd!', hash, (err, res) => {
+    bcrypt.compare(, hash, (err, res) => {
         console.log(res); //true
     });
 });
