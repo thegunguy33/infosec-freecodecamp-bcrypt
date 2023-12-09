@@ -33,31 +33,4 @@ let result = bcrypt.compareSync(myPlaintextPassword, hash)
 //END_SYNC
 
 
-app.listen(process.env.PORT || 3032, () => {});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(process.env.PORT || 3000, () => {});
+app.listen(process.env.PORT || 3030, () => {});
