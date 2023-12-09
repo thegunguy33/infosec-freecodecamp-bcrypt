@@ -11,6 +11,9 @@ const someOtherPlaintextPassword = 'pass123';
 
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 const bcrypt      = require('bcrypt');
+bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
+    /*Store hash in your db*/
+});
 
 
 //END_ASYNC
